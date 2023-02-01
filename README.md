@@ -1,5 +1,5 @@
 # container-queries
 
-Simple motorcycle themed html page with multiple card tiles to demonstrate container queries.
+Simple motorcycle themed html page with multiple card tiles to explore container queries.
 
-Image sources from unsplash
+Image urls from unsplash.
