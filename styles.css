@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+}
+
+.one-column {
+    margin: 16px;
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 16px;
+}
+.three-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin: 16px;
+}
+
+.container {
+    container-type: inline-size;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 24px;
+}
+
+.image-wrapper {
+    object-fit: contain;
+    overflow: hidden;
+    margin: 16px;
+    border-radius: 16px;
+    aspect-ratio: 1;
+}
+
+.image-wrapper img {
+    width: 100%;
+}
+
+.info-wrapper {
+    padding: 16px 8px;
+}
+
+.info-wrapper h2 {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 0;
+}
+
+.info-wrapper p {
+    display: none;
+}
+
+@container (min-width: 300px) {
+    .card {
+        display: flex;
+        flex-direction: row;
+
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    .image-wrapper {
+        width: 40cqw;
+        margin: 16px;
+        border-radius: 24px;
+    }
+
+    .info-wrapper {
+        margin: auto;
+        width: 60cqw;
+    }
+
+    .info-wrapper h2 {
+        font-size: 2em;
+        text-align: center;
+        margin: 0;
+    }
+}
+
+@container (min-width: 600px) {
+    .card {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    .info-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .image-wrapper {
+        width: 40cqw;
+        margin: 16px;
+    }
+    .info-wrapper {
+        width: 60cqw;
+    }
+    .info-wrapper h2 {
+        font-size: 3em;
+        text-align: left;
+    }
+    .info-wrapper p {
+        display: flex;
+        font-size: 1.5em;
+    }
+}
+
+@container (min-width: 1080px) {
+
+    .card {
+        background-image: url("https://images.unsplash.com/photo-1608566048419-219a158b11e5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=988&q=80");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .image-wrapper {
+        width: 40cqw;
+        margin: 32px;
+    }
+    .info-wrapper {
+        width: 60cqw;
+    }
+
+    .info-wrapper h2 {
+        font-size: 4em;
+        color: white;
+    }
+
+    .info-wrapper p {
+        font-size: 2em;
+        color: white;
+    }
+}
